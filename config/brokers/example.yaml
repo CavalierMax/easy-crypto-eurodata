@@ -1,0 +1,43 @@
+broker: ExampleExchange
+
+columns:
+  data: Timestamp
+  tipo: Type
+  asset_out: Asset sent
+  quantita_out: Amount sent
+  asset_in: Asset received
+  quantita_in: Amount received
+  valore_eur: EUR value
+  commissione_eur: EUR fee
+  id_operazione: Transaction ID
+  id_trasferimento: Transfer ID
+  broker_destinazione: Destination broker
+  id_operazione_collegata: Linked transaction ID
+
+operation_types:
+  buy: acquisto
+  sell: vendita
+  swap: permuta
+  staking: staking
+  reward: reward
+  airdrop: airdrop
+  deposit: deposito
+  withdrawal: prelievo
+  transfer: trasferimento
+  fee: commissione
+
+date_format: "%Y-%m-%d %H:%M:%S%z"
+# Usato solo se l'export contiene date senza offset. Rimuovere per renderle errore.
+default_timezone: Europe/Rome
+
+csv:
+  separator: ";"
+  encoding: utf-8-sig
+
+decimal:
+  separator: ","
+  thousands_separator: "."
+
+excel:
+  sheet: 0
+
